@@ -3,10 +3,8 @@ import numpy as np
 from stable_baselines3 import PPO
 from gym_pybullet_drones.envs.HoverAviary import HoverAviary
 from gym_pybullet_drones.utils.enums import DroneModel
-# Model load karo
-model = PPO.load("hover_10m_model_new")
 
-# GUI on karke dekho
+model = PPO.load("hover_10m_model_new")
 env = HoverAviary(drone_model=DroneModel.CF2X, gui=True)
 obs, info = env.reset()
 
