@@ -12,18 +12,14 @@ try:
     import tensorboard
 except ImportError:
     log_path = None
-    print("Warning: Tensorboard nahi mila, bina graph ke train hoga.")
+    
 
 model = PPO("MlpPolicy", 
             env, 
             verbose=1, 
             device="cpu", 
             tensorboard_log=log_path)
-
-
-print("M4 Beast mode ON! Training starting for 1 Lakh steps...")
 model.learn(total_timesteps=500000)
 
 
 model.save("hover_10m_model_new")
-print("Bhai, model save ho gaya. Ab so jao!")
