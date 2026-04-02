@@ -4,7 +4,7 @@ import time
 from stable_baselines3 import PPO
 from gym_pybullet_drones.envs.SmartDroneEnv import SmartDroneEnv
 
-model = PPO.load("wall")
+model = PPO.load("smart_drone_model2")
 env = SmartDroneEnv(gui=True) # Ab maza dekho!
 
 obs, info = env.reset()
