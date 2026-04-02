@@ -1,13 +1,13 @@
 import os
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
 from stable_baselines3 import PPO
-from gym_pybullet_drones.envs.SmartDroneEnv import SmartDroneEnv
+from gym_pybullet_drones.envs.WallAviary import WallAviary
 
 def start_training():
-    # M4 Pe training tez karne ke liye gui=False
-    env = SmartDroneEnv(gui=False)
     
-    # PPO Algorithm: Sabse best drones ke liye
+    env = WallAviary(gui=False)
+    
+    
     model = PPO("MlpPolicy", env, verbose=1)
     
     print("M4 Power Starting... Drone seekhna shuru kar raha hai!")
