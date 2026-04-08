@@ -8,7 +8,7 @@ def test_drone():
     model_path = "ppo_wall_drone" 
     
     try:
-        model = PPO.load("wall", env=env)
+        model = PPO.load("models/best/best_model.zip", env=env)
         print(f"Model '{model_path}' loaded successfully! 🚀")
     except Exception as e:
         print(f"Error loading model: {e}")
